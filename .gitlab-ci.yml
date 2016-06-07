@@ -1,0 +1,252 @@
+image: docker:latest
+
+services:
+ - docker:dind
+
+stages:
+ - build
+ - test
+ - deploy
+
+before_script:
+ - docker info
+
+build-centos5-193:
+ stage: test
+ script:
+  - docker build -t images-centos5-ruby193 $CI_PROJECT_DIR/centos5-ruby193
+  - docker tag images-centos5-ruby193 udienz/images:centos5-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-ruby193
+
+build-centos5-200:
+ stage: test
+ script:
+  - docker build -t images-centos5-ruby200 $CI_PROJECT_DIR/centos5-ruby200
+  - docker tag images-centos5-ruby200 udienz/images:centos5-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-ruby200
+
+build-centos5-219:
+ stage: test
+ script:
+  - docker build -t images-centos5-ruby219 $CI_PROJECT_DIR/centos5-ruby219
+  - docker tag images-centos5-ruby219 udienz/images:centos5-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-ruby219
+
+build-centos5-225:
+ stage: test
+ script:
+  - docker build -t images-centos5-ruby225 $CI_PROJECT_DIR/centos5-ruby225
+  - docker tag images-centos5-ruby225 udienz/images:centos5-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-ruby225
+
+build-centos5-231:
+ stage: test
+ script:
+  - docker build -t images-centos5-ruby231 $CI_PROJECT_DIR/centos5-ruby231
+  - docker tag images-centos5-ruby231 udienz/images:centos5-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-ruby231
+
+build-centos6-193:
+ stage: test
+ script:
+  - docker build -t images-centos6-ruby193 $CI_PROJECT_DIR/centos6-ruby193
+  - docker tag images-centos6-ruby193 udienz/images:centos6-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-ruby193
+
+build-centos6-200:
+ stage: test
+ script:
+  - docker build -t images-centos6-ruby200 $CI_PROJECT_DIR/centos6-ruby200
+  - docker tag images-centos6-ruby200 udienz/images:centos6-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-ruby200
+
+build-centos6-219:
+ stage: test
+ script:
+  - docker build -t images-centos6-ruby219 $CI_PROJECT_DIR/centos6-ruby219
+  - docker tag images-centos6-ruby219 udienz/images:centos6-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-ruby219
+
+build-centos6-225:
+ stage: test
+ script:
+  - docker build -t images-centos6-ruby225 $CI_PROJECT_DIR/centos6-ruby225
+  - docker tag images-centos6-ruby225 udienz/images:centos6-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-ruby225
+
+build-centos6-231:
+ stage: test
+ script:
+  - docker build -t images-centos6-ruby231 $CI_PROJECT_DIR/centos6-ruby231
+  - docker tag images-centos6-ruby231 udienz/images:centos6-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-ruby231
+
+build-centos7-193:
+ stage: test
+ script:
+  - docker build -t images-centos7-ruby193 $CI_PROJECT_DIR/centos7-ruby193
+  - docker tag images-centos7-ruby193 udienz/images:centos7-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-ruby193
+
+build-centos7-200:
+ stage: test
+ script:
+  - docker build -t images-centos7-ruby200 $CI_PROJECT_DIR/centos7-ruby200
+  - docker tag images-centos7-ruby200 udienz/images:centos7-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-ruby200
+
+build-centos7-219:
+ stage: test
+ script:
+  - docker build -t images-centos7-ruby219 $CI_PROJECT_DIR/centos7-ruby219
+  - docker tag images-centos7-ruby219 udienz/images:centos7-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-ruby219
+
+build-centos7-225:
+ stage: test
+ script:
+  - docker build -t images-centos7-ruby225 $CI_PROJECT_DIR/centos7-ruby225
+  - docker tag images-centos7-ruby225 udienz/images:centos7-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-ruby225
+
+build-centos7-231:
+ stage: test
+ script:
+  - docker build -t images-centos7-ruby231 $CI_PROJECT_DIR/centos7-ruby231
+  - docker tag images-centos7-ruby231 udienz/images:centos7-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-ruby231
+
+build-precise-193:
+ stage: test
+ script:
+  - docker build -t images-precise-ruby193 $CI_PROJECT_DIR/precise-ruby193
+  - docker tag images-precise-ruby193 udienz/images:precise-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-ruby193
+
+build-precise-200:
+ stage: test
+ script:
+  - docker build -t images-precise-ruby200 $CI_PROJECT_DIR/precise-ruby200
+  - docker tag images-precise-ruby200 udienz/images:precise-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-ruby200
+
+build-precise-219:
+ stage: test
+ script:
+  - docker build -t images-precise-ruby219 $CI_PROJECT_DIR/precise-ruby219
+  - docker tag images-precise-ruby219 udienz/images:precise-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-ruby219
+
+build-precise-225:
+ stage: test
+ script:
+  - docker build -t images-precise-ruby225 $CI_PROJECT_DIR/precise-ruby225
+  - docker tag images-precise-ruby225 udienz/images:precise-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-ruby225
+
+build-precise-231:
+ stage: test
+ script:
+  - docker build -t images-precise-ruby231 $CI_PROJECT_DIR/precise-ruby231
+  - docker tag images-precise-ruby231 udienz/images:precise-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-ruby231
+
+build-trusty-193:
+ stage: test
+ script:
+  - docker build -t images-trusty-ruby193 $CI_PROJECT_DIR/trusty-ruby193
+  - docker tag images-trusty-ruby193 udienz/images:trusty-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-ruby193
+
+build-trusty-200:
+ stage: test
+ script:
+  - docker build -t images-trusty-ruby200 $CI_PROJECT_DIR/trusty-ruby200
+  - docker tag images-trusty-ruby200 udienz/images:trusty-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-ruby200
+
+build-trusty-219:
+ stage: test
+ script:
+  - docker build -t images-trusty-ruby219 $CI_PROJECT_DIR/trusty-ruby219
+  - docker tag images-trusty-ruby219 udienz/images:trusty-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-ruby219
+
+build-trusty-225:
+ stage: test
+ script:
+  - docker build -t images-trusty-ruby225 $CI_PROJECT_DIR/trusty-ruby225
+  - docker tag images-trusty-ruby225 udienz/images:trusty-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-ruby225
+
+build-trusty-231:
+ stage: test
+ script:
+  - docker build -t images-trusty-ruby231 $CI_PROJECT_DIR/trusty-ruby231
+  - docker tag images-trusty-ruby231 udienz/images:trusty-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-ruby231
+
+build-xenial-193:
+ stage: test
+ script:
+  - docker build -t images-xenial-ruby193 $CI_PROJECT_DIR/xenial-ruby193
+  - docker tag images-xenial-ruby193 udienz/images:xenial-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-ruby193
+
+build-xenial-200:
+ stage: test
+ script:
+  - docker build -t images-xenial-ruby200 $CI_PROJECT_DIR/xenial-ruby200
+  - docker tag images-xenial-ruby200 udienz/images:xenial-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-ruby200
+
+build-xenial-219:
+ stage: test
+ script:
+  - docker build -t images-xenial-ruby219 $CI_PROJECT_DIR/xenial-ruby219
+  - docker tag images-xenial-ruby219 udienz/images:xenial-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-ruby219
+
+build-xenial-225:
+ stage: test
+ script:
+  - docker build -t images-xenial-ruby225 $CI_PROJECT_DIR/xenial-ruby225
+  - docker tag images-xenial-ruby225 udienz/images:xenial-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-ruby225
+
+build-xenial-231:
+ stage: test
+ script:
+  - docker build -t images-xenial-ruby231 $CI_PROJECT_DIR/xenial-ruby231
+  - docker tag images-xenial-ruby231 udienz/images:xenial-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-ruby231

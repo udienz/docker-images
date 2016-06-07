@@ -1,0 +1,5 @@
+# Install and configure a basic SSH server
+RUN apt-get update \
+    && sudo apt-get dist-upgrade -y \
+    && sudo apt-get install wget build-essential -y \
+    && apt-get clean -y && rm -rf /var/lib/apt/lists/*

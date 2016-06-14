@@ -250,3 +250,123 @@ build-xenial-231:
   - docker tag images-xenial-ruby231 udienz/images:xenial-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:xenial-ruby231
+
+build-wheezy-193:
+ stage: test
+ script:
+  - docker build -t images-wheezy-ruby193 $CI_PROJECT_DIR/wheezy-ruby193
+  - docker tag images-wheezy-ruby193 udienz/images:wheezy-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-ruby193
+
+build-wheezy-200:
+ stage: test
+ script:
+  - docker build -t images-wheezy-ruby200 $CI_PROJECT_DIR/wheezy-ruby200
+  - docker tag images-wheezy-ruby200 udienz/images:wheezy-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-ruby200
+
+build-wheezy-219:
+ stage: test
+ script:
+  - docker build -t images-wheezy-ruby219 $CI_PROJECT_DIR/wheezy-ruby219
+  - docker tag images-wheezy-ruby219 udienz/images:wheezy-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-ruby219
+
+build-wheezy-225:
+ stage: test
+ script:
+  - docker build -t images-wheezy-ruby225 $CI_PROJECT_DIR/wheezy-ruby225
+  - docker tag images-wheezy-ruby225 udienz/images:wheezy-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-ruby225
+
+build-wheezy-231:
+ stage: test
+ script:
+  - docker build -t images-wheezy-ruby231 $CI_PROJECT_DIR/wheezy-ruby231
+  - docker tag images-wheezy-ruby231 udienz/images:wheezy-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-ruby231
+
+build-jessie-193:
+ stage: test
+ script:
+  - docker build -t images-jessie-ruby193 $CI_PROJECT_DIR/jessie-ruby193
+  - docker tag images-jessie-ruby193 udienz/images:jessie-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-ruby193
+
+build-jessie-200:
+ stage: test
+ script:
+  - docker build -t images-jessie-ruby200 $CI_PROJECT_DIR/jessie-ruby200
+  - docker tag images-jessie-ruby200 udienz/images:jessie-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-ruby200
+
+build-jessie-219:
+ stage: test
+ script:
+  - docker build -t images-jessie-ruby219 $CI_PROJECT_DIR/jessie-ruby219
+  - docker tag images-jessie-ruby219 udienz/images:jessie-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-ruby219
+
+build-jessie-225:
+ stage: test
+ script:
+  - docker build -t images-jessie-ruby225 $CI_PROJECT_DIR/jessie-ruby225
+  - docker tag images-jessie-ruby225 udienz/images:jessie-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-ruby225
+
+build-jessie-231:
+ stage: test
+ script:
+  - docker build -t images-jessie-ruby231 $CI_PROJECT_DIR/jessie-ruby231
+  - docker tag images-jessie-ruby231 udienz/images:jessie-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-ruby231
+
+build-stretch-193:
+ stage: test
+ script:
+  - docker build -t images-stretch-ruby193 $CI_PROJECT_DIR/stretch-ruby193
+  - docker tag images-stretch-ruby193 udienz/images:stretch-ruby193
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-ruby193
+
+build-stretch-200:
+ stage: test
+ script:
+  - docker build -t images-stretch-ruby200 $CI_PROJECT_DIR/stretch-ruby200
+  - docker tag images-stretch-ruby200 udienz/images:stretch-ruby200
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-ruby200
+
+build-stretch-219:
+ stage: test
+ script:
+  - docker build -t images-stretch-ruby219 $CI_PROJECT_DIR/stretch-ruby219
+  - docker tag images-stretch-ruby219 udienz/images:stretch-ruby219
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-ruby219
+
+build-stretch-225:
+ stage: test
+ script:
+  - docker build -t images-stretch-ruby225 $CI_PROJECT_DIR/stretch-ruby225
+  - docker tag images-stretch-ruby225 udienz/images:stretch-ruby225
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-ruby225
+
+build-stretch-231:
+ stage: test
+ script:
+  - docker build -t images-stretch-ruby231 $CI_PROJECT_DIR/stretch-ruby231
+  - docker tag images-stretch-ruby231 udienz/images:stretch-ruby231
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-ruby231

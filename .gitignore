@@ -1,0 +1,5 @@
+list
+*.swp
+*.bak
+ssh-keys
+tmp/

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASE=$CI_PROJECT_DIR
-DISTRO="centos5 centos6 centos7 precise trusty xenial"
+DISTRO="centos5 centos6 centos7 precise trusty xenial wheezy jessie stretch"
 VERSION="193 200 219 225 231"
 OUT=.gitlab-ci.yml
 rm -f $OUT

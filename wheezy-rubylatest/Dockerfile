@@ -1,5 +1,5 @@
 #Created at Thu Jun 16 23:07:02 UTC 2016
-FROM udienz/buildpack:jessie
+FROM udienz/buildpack:wheezy
 MAINTAINER Mahyuddin Susanto <udienz@gmail.com>
 
 # Install and configure a basic SSH server
@@ -15,7 +15,7 @@ RUN echo 'check_certificate = off' >> /etc/wgetrc \
     && tar xzf /tmp/ruby-install-0.6.0.tar.gz \
     && cd ruby-install-0.6.0 \
     && make install \
-    && ruby-install --system ruby 2.3.1 \
+    && ruby-install --system --latest ruby \
     && gem install --no-ri --no-rdoc bundler \
     && gem update --system \
     && rm -rf /tmp/ruby-install* \

@@ -2,13 +2,14 @@
 # this is for debian based
 
 DISTRO="precise trusty xenial wheezy jessie stretch"
-VERSION="193 200 219 225 231"
+VERSION="193 200 219 225 231 latest"
 BASE=$HOME/git/docker/images
 
 for a in $DISTRO
 do
     for b in $VERSION
     do
+        mkdir $BASE/$a-ruby$b
         cat > $BASE/$a-ruby$b/Dockerfile <<EOF
 #Created at $(date -u)
 FROM udienz/buildpack:$a

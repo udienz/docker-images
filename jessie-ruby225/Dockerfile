@@ -1,4 +1,4 @@
-#Created at Mon Jun  6 16:51:38 UTC 2016
+#Created at Thu Jun 16 23:07:02 UTC 2016
 FROM udienz/buildpack:jessie
 MAINTAINER Mahyuddin Susanto <udienz@gmail.com>
 
@@ -9,7 +9,8 @@ RUN apt-get update \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp
-RUN wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz \
+RUN echo 'check_certificate = off' >> /etc/wgetrc \
+    && wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz \
     && apt-get update \
     && tar xzf /tmp/ruby-install-0.6.0.tar.gz \
     && cd ruby-install-0.6.0 \

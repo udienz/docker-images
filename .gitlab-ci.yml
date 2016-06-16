@@ -51,6 +51,14 @@ build-centos5-231:
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos5-ruby231
 
+build-centos5-latest:
+ stage: test
+ script:
+  - docker build -t images-centos5-rubylatest $CI_PROJECT_DIR/centos5-rubylatest
+  - docker tag images-centos5-rubylatest udienz/images:centos5-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos5-rubylatest
+
 build-centos6-193:
  stage: test
  script:
@@ -90,6 +98,14 @@ build-centos6-231:
   - docker tag images-centos6-ruby231 udienz/images:centos6-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos6-ruby231
+
+build-centos6-latest:
+ stage: test
+ script:
+  - docker build -t images-centos6-rubylatest $CI_PROJECT_DIR/centos6-rubylatest
+  - docker tag images-centos6-rubylatest udienz/images:centos6-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos6-rubylatest
 
 build-centos7-193:
  stage: test
@@ -131,6 +147,14 @@ build-centos7-231:
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos7-ruby231
 
+build-centos7-latest:
+ stage: test
+ script:
+  - docker build -t images-centos7-rubylatest $CI_PROJECT_DIR/centos7-rubylatest
+  - docker tag images-centos7-rubylatest udienz/images:centos7-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:centos7-rubylatest
+
 build-precise-193:
  stage: test
  script:
@@ -170,6 +194,14 @@ build-precise-231:
   - docker tag images-precise-ruby231 udienz/images:precise-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:precise-ruby231
+
+build-precise-latest:
+ stage: test
+ script:
+  - docker build -t images-precise-rubylatest $CI_PROJECT_DIR/precise-rubylatest
+  - docker tag images-precise-rubylatest udienz/images:precise-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:precise-rubylatest
 
 build-trusty-193:
  stage: test
@@ -211,6 +243,14 @@ build-trusty-231:
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:trusty-ruby231
 
+build-trusty-latest:
+ stage: test
+ script:
+  - docker build -t images-trusty-rubylatest $CI_PROJECT_DIR/trusty-rubylatest
+  - docker tag images-trusty-rubylatest udienz/images:trusty-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:trusty-rubylatest
+
 build-xenial-193:
  stage: test
  script:
@@ -250,6 +290,14 @@ build-xenial-231:
   - docker tag images-xenial-ruby231 udienz/images:xenial-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:xenial-ruby231
+
+build-xenial-latest:
+ stage: test
+ script:
+  - docker build -t images-xenial-rubylatest $CI_PROJECT_DIR/xenial-rubylatest
+  - docker tag images-xenial-rubylatest udienz/images:xenial-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:xenial-rubylatest
 
 build-wheezy-193:
  stage: test
@@ -291,6 +339,14 @@ build-wheezy-231:
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:wheezy-ruby231
 
+build-wheezy-latest:
+ stage: test
+ script:
+  - docker build -t images-wheezy-rubylatest $CI_PROJECT_DIR/wheezy-rubylatest
+  - docker tag images-wheezy-rubylatest udienz/images:wheezy-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:wheezy-rubylatest
+
 build-jessie-193:
  stage: test
  script:
@@ -331,6 +387,14 @@ build-jessie-231:
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:jessie-ruby231
 
+build-jessie-latest:
+ stage: test
+ script:
+  - docker build -t images-jessie-rubylatest $CI_PROJECT_DIR/jessie-rubylatest
+  - docker tag images-jessie-rubylatest udienz/images:jessie-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:jessie-rubylatest
+
 build-stretch-193:
  stage: test
  script:
@@ -370,3 +434,11 @@ build-stretch-231:
   - docker tag images-stretch-ruby231 udienz/images:stretch-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:stretch-ruby231
+
+build-stretch-latest:
+ stage: test
+ script:
+  - docker build -t images-stretch-rubylatest $CI_PROJECT_DIR/stretch-rubylatest
+  - docker tag images-stretch-rubylatest udienz/images:stretch-rubylatest
+  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
+  - docker push udienz/images:stretch-rubylatest

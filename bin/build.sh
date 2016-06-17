@@ -2,7 +2,7 @@
 
 BASE=$CI_PROJECT_DIR
 DISTRO="centos5 centos6 centos7 precise trusty xenial wheezy jessie stretch"
-VERSION="193 200 219 225 231 latest"
+VERSION="193 200 219 225 231"
 OUT=.gitlab-ci.yml
 rm -f $OUT
 cat > $OUT  <<EOF
@@ -30,6 +30,7 @@ do
 build-$x-$y:
  stage: test
  script:
+  - docker pull udienz/images:$x-ruby$y
   - docker build -t images-$x-ruby$y \$CI_PROJECT_DIR/$x-ruby$y
   - docker tag images-$x-ruby$y udienz/images:$x-ruby$y
   - docker login -u=\"\$DOCKERUSER\" -p=\"\$DOCKERPASS\"

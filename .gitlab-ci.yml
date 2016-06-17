@@ -14,6 +14,7 @@ before_script:
 build-centos5-193:
  stage: test
  script:
+  - docker pull udienz/images:centos5-ruby193
   - docker build -t images-centos5-ruby193 $CI_PROJECT_DIR/centos5-ruby193
   - docker tag images-centos5-ruby193 udienz/images:centos5-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -22,6 +23,7 @@ build-centos5-193:
 build-centos5-200:
  stage: test
  script:
+  - docker pull udienz/images:centos5-ruby200
   - docker build -t images-centos5-ruby200 $CI_PROJECT_DIR/centos5-ruby200
   - docker tag images-centos5-ruby200 udienz/images:centos5-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -30,6 +32,7 @@ build-centos5-200:
 build-centos5-219:
  stage: test
  script:
+  - docker pull udienz/images:centos5-ruby219
   - docker build -t images-centos5-ruby219 $CI_PROJECT_DIR/centos5-ruby219
   - docker tag images-centos5-ruby219 udienz/images:centos5-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -38,6 +41,7 @@ build-centos5-219:
 build-centos5-225:
  stage: test
  script:
+  - docker pull udienz/images:centos5-ruby225
   - docker build -t images-centos5-ruby225 $CI_PROJECT_DIR/centos5-ruby225
   - docker tag images-centos5-ruby225 udienz/images:centos5-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -46,22 +50,16 @@ build-centos5-225:
 build-centos5-231:
  stage: test
  script:
+  - docker pull udienz/images:centos5-ruby231
   - docker build -t images-centos5-ruby231 $CI_PROJECT_DIR/centos5-ruby231
   - docker tag images-centos5-ruby231 udienz/images:centos5-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos5-ruby231
 
-build-centos5-latest:
- stage: test
- script:
-  - docker build -t images-centos5-rubylatest $CI_PROJECT_DIR/centos5-rubylatest
-  - docker tag images-centos5-rubylatest udienz/images:centos5-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:centos5-rubylatest
-
 build-centos6-193:
  stage: test
  script:
+  - docker pull udienz/images:centos6-ruby193
   - docker build -t images-centos6-ruby193 $CI_PROJECT_DIR/centos6-ruby193
   - docker tag images-centos6-ruby193 udienz/images:centos6-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -70,6 +68,7 @@ build-centos6-193:
 build-centos6-200:
  stage: test
  script:
+  - docker pull udienz/images:centos6-ruby200
   - docker build -t images-centos6-ruby200 $CI_PROJECT_DIR/centos6-ruby200
   - docker tag images-centos6-ruby200 udienz/images:centos6-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -78,6 +77,7 @@ build-centos6-200:
 build-centos6-219:
  stage: test
  script:
+  - docker pull udienz/images:centos6-ruby219
   - docker build -t images-centos6-ruby219 $CI_PROJECT_DIR/centos6-ruby219
   - docker tag images-centos6-ruby219 udienz/images:centos6-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -86,6 +86,7 @@ build-centos6-219:
 build-centos6-225:
  stage: test
  script:
+  - docker pull udienz/images:centos6-ruby225
   - docker build -t images-centos6-ruby225 $CI_PROJECT_DIR/centos6-ruby225
   - docker tag images-centos6-ruby225 udienz/images:centos6-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -94,22 +95,16 @@ build-centos6-225:
 build-centos6-231:
  stage: test
  script:
+  - docker pull udienz/images:centos6-ruby231
   - docker build -t images-centos6-ruby231 $CI_PROJECT_DIR/centos6-ruby231
   - docker tag images-centos6-ruby231 udienz/images:centos6-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos6-ruby231
 
-build-centos6-latest:
- stage: test
- script:
-  - docker build -t images-centos6-rubylatest $CI_PROJECT_DIR/centos6-rubylatest
-  - docker tag images-centos6-rubylatest udienz/images:centos6-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:centos6-rubylatest
-
 build-centos7-193:
  stage: test
  script:
+  - docker pull udienz/images:centos7-ruby193
   - docker build -t images-centos7-ruby193 $CI_PROJECT_DIR/centos7-ruby193
   - docker tag images-centos7-ruby193 udienz/images:centos7-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -118,6 +113,7 @@ build-centos7-193:
 build-centos7-200:
  stage: test
  script:
+  - docker pull udienz/images:centos7-ruby200
   - docker build -t images-centos7-ruby200 $CI_PROJECT_DIR/centos7-ruby200
   - docker tag images-centos7-ruby200 udienz/images:centos7-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -126,6 +122,7 @@ build-centos7-200:
 build-centos7-219:
  stage: test
  script:
+  - docker pull udienz/images:centos7-ruby219
   - docker build -t images-centos7-ruby219 $CI_PROJECT_DIR/centos7-ruby219
   - docker tag images-centos7-ruby219 udienz/images:centos7-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -134,6 +131,7 @@ build-centos7-219:
 build-centos7-225:
  stage: test
  script:
+  - docker pull udienz/images:centos7-ruby225
   - docker build -t images-centos7-ruby225 $CI_PROJECT_DIR/centos7-ruby225
   - docker tag images-centos7-ruby225 udienz/images:centos7-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -142,22 +140,16 @@ build-centos7-225:
 build-centos7-231:
  stage: test
  script:
+  - docker pull udienz/images:centos7-ruby231
   - docker build -t images-centos7-ruby231 $CI_PROJECT_DIR/centos7-ruby231
   - docker tag images-centos7-ruby231 udienz/images:centos7-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:centos7-ruby231
 
-build-centos7-latest:
- stage: test
- script:
-  - docker build -t images-centos7-rubylatest $CI_PROJECT_DIR/centos7-rubylatest
-  - docker tag images-centos7-rubylatest udienz/images:centos7-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:centos7-rubylatest
-
 build-precise-193:
  stage: test
  script:
+  - docker pull udienz/images:precise-ruby193
   - docker build -t images-precise-ruby193 $CI_PROJECT_DIR/precise-ruby193
   - docker tag images-precise-ruby193 udienz/images:precise-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -166,6 +158,7 @@ build-precise-193:
 build-precise-200:
  stage: test
  script:
+  - docker pull udienz/images:precise-ruby200
   - docker build -t images-precise-ruby200 $CI_PROJECT_DIR/precise-ruby200
   - docker tag images-precise-ruby200 udienz/images:precise-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -174,6 +167,7 @@ build-precise-200:
 build-precise-219:
  stage: test
  script:
+  - docker pull udienz/images:precise-ruby219
   - docker build -t images-precise-ruby219 $CI_PROJECT_DIR/precise-ruby219
   - docker tag images-precise-ruby219 udienz/images:precise-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -182,6 +176,7 @@ build-precise-219:
 build-precise-225:
  stage: test
  script:
+  - docker pull udienz/images:precise-ruby225
   - docker build -t images-precise-ruby225 $CI_PROJECT_DIR/precise-ruby225
   - docker tag images-precise-ruby225 udienz/images:precise-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -190,22 +185,16 @@ build-precise-225:
 build-precise-231:
  stage: test
  script:
+  - docker pull udienz/images:precise-ruby231
   - docker build -t images-precise-ruby231 $CI_PROJECT_DIR/precise-ruby231
   - docker tag images-precise-ruby231 udienz/images:precise-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:precise-ruby231
 
-build-precise-latest:
- stage: test
- script:
-  - docker build -t images-precise-rubylatest $CI_PROJECT_DIR/precise-rubylatest
-  - docker tag images-precise-rubylatest udienz/images:precise-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:precise-rubylatest
-
 build-trusty-193:
  stage: test
  script:
+  - docker pull udienz/images:trusty-ruby193
   - docker build -t images-trusty-ruby193 $CI_PROJECT_DIR/trusty-ruby193
   - docker tag images-trusty-ruby193 udienz/images:trusty-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -214,6 +203,7 @@ build-trusty-193:
 build-trusty-200:
  stage: test
  script:
+  - docker pull udienz/images:trusty-ruby200
   - docker build -t images-trusty-ruby200 $CI_PROJECT_DIR/trusty-ruby200
   - docker tag images-trusty-ruby200 udienz/images:trusty-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -222,6 +212,7 @@ build-trusty-200:
 build-trusty-219:
  stage: test
  script:
+  - docker pull udienz/images:trusty-ruby219
   - docker build -t images-trusty-ruby219 $CI_PROJECT_DIR/trusty-ruby219
   - docker tag images-trusty-ruby219 udienz/images:trusty-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -230,6 +221,7 @@ build-trusty-219:
 build-trusty-225:
  stage: test
  script:
+  - docker pull udienz/images:trusty-ruby225
   - docker build -t images-trusty-ruby225 $CI_PROJECT_DIR/trusty-ruby225
   - docker tag images-trusty-ruby225 udienz/images:trusty-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -238,22 +230,16 @@ build-trusty-225:
 build-trusty-231:
  stage: test
  script:
+  - docker pull udienz/images:trusty-ruby231
   - docker build -t images-trusty-ruby231 $CI_PROJECT_DIR/trusty-ruby231
   - docker tag images-trusty-ruby231 udienz/images:trusty-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:trusty-ruby231
 
-build-trusty-latest:
- stage: test
- script:
-  - docker build -t images-trusty-rubylatest $CI_PROJECT_DIR/trusty-rubylatest
-  - docker tag images-trusty-rubylatest udienz/images:trusty-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:trusty-rubylatest
-
 build-xenial-193:
  stage: test
  script:
+  - docker pull udienz/images:xenial-ruby193
   - docker build -t images-xenial-ruby193 $CI_PROJECT_DIR/xenial-ruby193
   - docker tag images-xenial-ruby193 udienz/images:xenial-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -262,6 +248,7 @@ build-xenial-193:
 build-xenial-200:
  stage: test
  script:
+  - docker pull udienz/images:xenial-ruby200
   - docker build -t images-xenial-ruby200 $CI_PROJECT_DIR/xenial-ruby200
   - docker tag images-xenial-ruby200 udienz/images:xenial-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -270,6 +257,7 @@ build-xenial-200:
 build-xenial-219:
  stage: test
  script:
+  - docker pull udienz/images:xenial-ruby219
   - docker build -t images-xenial-ruby219 $CI_PROJECT_DIR/xenial-ruby219
   - docker tag images-xenial-ruby219 udienz/images:xenial-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -278,6 +266,7 @@ build-xenial-219:
 build-xenial-225:
  stage: test
  script:
+  - docker pull udienz/images:xenial-ruby225
   - docker build -t images-xenial-ruby225 $CI_PROJECT_DIR/xenial-ruby225
   - docker tag images-xenial-ruby225 udienz/images:xenial-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -286,22 +275,16 @@ build-xenial-225:
 build-xenial-231:
  stage: test
  script:
+  - docker pull udienz/images:xenial-ruby231
   - docker build -t images-xenial-ruby231 $CI_PROJECT_DIR/xenial-ruby231
   - docker tag images-xenial-ruby231 udienz/images:xenial-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:xenial-ruby231
 
-build-xenial-latest:
- stage: test
- script:
-  - docker build -t images-xenial-rubylatest $CI_PROJECT_DIR/xenial-rubylatest
-  - docker tag images-xenial-rubylatest udienz/images:xenial-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:xenial-rubylatest
-
 build-wheezy-193:
  stage: test
  script:
+  - docker pull udienz/images:wheezy-ruby193
   - docker build -t images-wheezy-ruby193 $CI_PROJECT_DIR/wheezy-ruby193
   - docker tag images-wheezy-ruby193 udienz/images:wheezy-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -310,6 +293,7 @@ build-wheezy-193:
 build-wheezy-200:
  stage: test
  script:
+  - docker pull udienz/images:wheezy-ruby200
   - docker build -t images-wheezy-ruby200 $CI_PROJECT_DIR/wheezy-ruby200
   - docker tag images-wheezy-ruby200 udienz/images:wheezy-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -318,6 +302,7 @@ build-wheezy-200:
 build-wheezy-219:
  stage: test
  script:
+  - docker pull udienz/images:wheezy-ruby219
   - docker build -t images-wheezy-ruby219 $CI_PROJECT_DIR/wheezy-ruby219
   - docker tag images-wheezy-ruby219 udienz/images:wheezy-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -326,6 +311,7 @@ build-wheezy-219:
 build-wheezy-225:
  stage: test
  script:
+  - docker pull udienz/images:wheezy-ruby225
   - docker build -t images-wheezy-ruby225 $CI_PROJECT_DIR/wheezy-ruby225
   - docker tag images-wheezy-ruby225 udienz/images:wheezy-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -334,22 +320,16 @@ build-wheezy-225:
 build-wheezy-231:
  stage: test
  script:
+  - docker pull udienz/images:wheezy-ruby231
   - docker build -t images-wheezy-ruby231 $CI_PROJECT_DIR/wheezy-ruby231
   - docker tag images-wheezy-ruby231 udienz/images:wheezy-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:wheezy-ruby231
 
-build-wheezy-latest:
- stage: test
- script:
-  - docker build -t images-wheezy-rubylatest $CI_PROJECT_DIR/wheezy-rubylatest
-  - docker tag images-wheezy-rubylatest udienz/images:wheezy-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:wheezy-rubylatest
-
 build-jessie-193:
  stage: test
  script:
+  - docker pull udienz/images:jessie-ruby193
   - docker build -t images-jessie-ruby193 $CI_PROJECT_DIR/jessie-ruby193
   - docker tag images-jessie-ruby193 udienz/images:jessie-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -358,6 +338,7 @@ build-jessie-193:
 build-jessie-200:
  stage: test
  script:
+  - docker pull udienz/images:jessie-ruby200
   - docker build -t images-jessie-ruby200 $CI_PROJECT_DIR/jessie-ruby200
   - docker tag images-jessie-ruby200 udienz/images:jessie-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -366,6 +347,7 @@ build-jessie-200:
 build-jessie-219:
  stage: test
  script:
+  - docker pull udienz/images:jessie-ruby219
   - docker build -t images-jessie-ruby219 $CI_PROJECT_DIR/jessie-ruby219
   - docker tag images-jessie-ruby219 udienz/images:jessie-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -374,6 +356,7 @@ build-jessie-219:
 build-jessie-225:
  stage: test
  script:
+  - docker pull udienz/images:jessie-ruby225
   - docker build -t images-jessie-ruby225 $CI_PROJECT_DIR/jessie-ruby225
   - docker tag images-jessie-ruby225 udienz/images:jessie-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -382,22 +365,16 @@ build-jessie-225:
 build-jessie-231:
  stage: test
  script:
+  - docker pull udienz/images:jessie-ruby231
   - docker build -t images-jessie-ruby231 $CI_PROJECT_DIR/jessie-ruby231
   - docker tag images-jessie-ruby231 udienz/images:jessie-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:jessie-ruby231
 
-build-jessie-latest:
- stage: test
- script:
-  - docker build -t images-jessie-rubylatest $CI_PROJECT_DIR/jessie-rubylatest
-  - docker tag images-jessie-rubylatest udienz/images:jessie-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:jessie-rubylatest
-
 build-stretch-193:
  stage: test
  script:
+  - docker pull udienz/images:stretch-ruby193
   - docker build -t images-stretch-ruby193 $CI_PROJECT_DIR/stretch-ruby193
   - docker tag images-stretch-ruby193 udienz/images:stretch-ruby193
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -406,6 +383,7 @@ build-stretch-193:
 build-stretch-200:
  stage: test
  script:
+  - docker pull udienz/images:stretch-ruby200
   - docker build -t images-stretch-ruby200 $CI_PROJECT_DIR/stretch-ruby200
   - docker tag images-stretch-ruby200 udienz/images:stretch-ruby200
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -414,6 +392,7 @@ build-stretch-200:
 build-stretch-219:
  stage: test
  script:
+  - docker pull udienz/images:stretch-ruby219
   - docker build -t images-stretch-ruby219 $CI_PROJECT_DIR/stretch-ruby219
   - docker tag images-stretch-ruby219 udienz/images:stretch-ruby219
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -422,6 +401,7 @@ build-stretch-219:
 build-stretch-225:
  stage: test
  script:
+  - docker pull udienz/images:stretch-ruby225
   - docker build -t images-stretch-ruby225 $CI_PROJECT_DIR/stretch-ruby225
   - docker tag images-stretch-ruby225 udienz/images:stretch-ruby225
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
@@ -430,15 +410,8 @@ build-stretch-225:
 build-stretch-231:
  stage: test
  script:
+  - docker pull udienz/images:stretch-ruby231
   - docker build -t images-stretch-ruby231 $CI_PROJECT_DIR/stretch-ruby231
   - docker tag images-stretch-ruby231 udienz/images:stretch-ruby231
   - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
   - docker push udienz/images:stretch-ruby231
-
-build-stretch-latest:
- stage: test
- script:
-  - docker build -t images-stretch-rubylatest $CI_PROJECT_DIR/stretch-rubylatest
-  - docker tag images-stretch-rubylatest udienz/images:stretch-rubylatest
-  - docker login -u="$DOCKERUSER" -p="$DOCKERPASS"
-  - docker push udienz/images:stretch-rubylatest

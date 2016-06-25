@@ -3,7 +3,7 @@
 BASE=$CI_PROJECT_DIR
 DISTRO="centos5 centos6 centos7 precise trusty xenial wheezy jessie stretch"
 VERSION="193 200 219 225 231"
-OUT=.gitlab-ci.yml
+OUT=.gitlab-ci.yml.neededit
 rm -f $OUT
 cat > $OUT  <<EOF
 image: docker:latest
@@ -28,7 +28,7 @@ do
         echo "$x ruby $y"
         echo "
 build-$x-$y:
- stage: test
+ stage: build
  script:
   - docker pull udienz/images:$x-ruby$y
   - docker build -t images-$x-ruby$y \$CI_PROJECT_DIR/$x-ruby$y
